@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(225, 225, 225);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.loading {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000003b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading img {
+  width: 5rem;
+  animation: loader 1.5s infinite;
+}
+.loading.pause {
+  display: none;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar-icon {
+  width: 3rem;
+}
+
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.users, .user {
+  width: 60%;
+  margin-top: 3rem;
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.users-item {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid rgb(48, 48, 48);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.back-icon {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  width: 3rem;
+}
+.text-underline:hover {
+  text-decoration: underline;
+}
+
+.user {
+  position: relative;
+}
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.user-avatar {
+  width: 5rem;
+  padding: 1rem;
+  border: 2px solid rgb(43, 43, 43);
+  border-radius: 50%;
+}
+
+.user-body__main {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.user-body__address {
+  padding: 2rem 0;
+}
+.address-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 1000px) {
+  .users, .user {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .address-list {
+    padding: 0;
+  }
+
+  .user-header {
+    flex-wrap: wrap-reverse;
+  }
+}

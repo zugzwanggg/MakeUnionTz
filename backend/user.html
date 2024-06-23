@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>User</title>
+</head>
+<body>
+  <div class="loading">
+    <img src="./img/loading-svgrepo-com.svg" alt="">
+  </div>
+  <div class="user">
+    <a href="index.html">
+      <img class="back-icon" src="./img/back-svgrepo-com.svg" alt="Back Icon">
+    </a>
+    <div class="user-header">
+      <div>
+        <h1 class="user-name">User Name</h1>
+        <a class="user-email" href="mailto:">useremail@example</a>
+      </div>
+      <img class="user-avatar" src="./img/avatar-default-svgrepo-com.svg" alt="">
+    </div>
+    <hr>
+    <div class="user-body">
+      <div class="user-body__main">
+        <a>Phone Number: <span class="phone-number"></span></a>
+        <p>User Name: <span class="user-webname"></span></p>
+        <a class="user-website text-underline">Website: </a>
+      </div>
+      <div class="user-body__address">
+        <b>Address:</b>
+        <ul class="address-list">
+          <li>
+            City: <span class="user-city"></span>
+          </li>
+          <li>
+            Street: <span class="user-street"></span>
+          </li>
+          <li>
+            Zip: <span class="user-zip"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="getUser.js"></script>
+</body>
+</html>
